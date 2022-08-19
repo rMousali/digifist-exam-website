@@ -182,8 +182,8 @@ input[type="radio"]:checked:after {
   width: 13px;
   height: 13px;
   border-radius: 13px;
-  top: -2px;
-  left: -1px;
+  /* top: -2px;
+  left: -1px; */
   position: relative;
   content: "";
   display: inline-block;
