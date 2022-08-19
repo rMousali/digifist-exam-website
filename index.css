@@ -1,0 +1,306 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("/public/fonts/Avenir/Avenir.ttc");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std Bold";
+  src: url("/public/fonts/ITC/ITCAvantGardePro-Bold.otf");
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic Std Demi";
+  src: url("/public/fonts/ITC/ITCAvantGardePro-Demi.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column_left {
+  min-width: 100%;
+  height: 100vh;
+}
+
+.column_left img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.column_right {
+  width: 100%;
+}
+
+.column_right-wrapper {
+  padding: 5rem 0 0 9rem;
+}
+
+.column_right-wrapper-info {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.column_right h4 {
+  font-family: "ITC Avant Garde Gothic Std Bold";
+  font-weight: 700;
+  font-size: 31.25px;
+  line-height: 130%;
+  margin: 0;
+}
+
+.column_right p {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #666666;
+  margin: 0;
+}
+
+.column_right button {
+  cursor: pointer;
+  color: #000000;
+  font-family: Avenir;
+  border: none;
+  border-bottom: 1px solid black !important;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 900;
+  background-color: transparent !important;
+  text-decoration: none;
+  padding: 0;
+  padding-bottom: 0.5rem;
+  max-width: 9rem;
+  text-align: start;
+}
+
+.column_right button:active {
+  position: relative;
+  top: 2px;
+}
+
+.product_card img {
+  max-width: 18rem;
+}
+
+.product_card p {
+  margin-bottom: 0;
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 160%;
+  margin-top: 1rem;
+  color: #000000;
+}
+
+.product_card span {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product_card span p {
+  margin: 0;
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12.8px;
+  line-height: 160%;
+  color: #000000;
+}
+
+.carousel_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carousel_btn {
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  border: 1px solid #e5e5e5;
+  padding: 0.5rem;
+  margin-top: 11rem;
+}
+
+#carousel-btn-left {
+  left: 0;
+}
+
+#carousel-btn-right {
+  right: 5%;
+}
+
+.product_wrapper {
+  position: absolute;
+  overflow: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked:after {
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+}
+
+input[id="blue_radio"]:after {
+  background-color: #99c3cc;
+}
+
+input[id="blue_radio"]:checked:after {
+  background-color: #99c3cc;
+  border: 1px solid black;
+}
+
+input[id="brown_radio"]:after {
+  background-color: #cc9999;
+}
+
+input[id="brown_radio"]:checked:after {
+  background-color: #cc9999;
+  border: 1px solid black;
+}
+
+input[id="pink_radio"]:after {
+  background-color: #cb99cc;
+}
+
+input[id="pink_radio"]:checked:after {
+  background-color: #cb99cc;
+  border: 1px solid black;
+}
+
+input[id="green_radio"]:after {
+  background-color: #a6cc99;
+}
+
+input[id="green_radio"]:checked:after {
+  background-color: #a6cc99;
+  border: 1px solid black;
+}
+
+@media (max-width: 1680px) {
+  .column_right-wrapper {
+    padding: 5rem 0 0 7rem;
+  }
+
+  .column_right-wrapper-info {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .column_right-wrapper {
+    padding: 3rem 0 0 5rem;
+  }
+
+  .column_right-wrapper-info {
+    max-width: 75%;
+    margin-bottom: 2rem;
+  }
+
+  .product_wrapper {
+    -webkit-overflow-scrolling: auto;
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 1024px) {
+  .column_right-wrapper {
+    padding: 2rem 0 0 4rem;
+  }
+
+  .column_right-wrapper-info {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative;
+  }
+  .column_left {
+    margin-bottom: -5rem;
+  }
+
+  .column_right-wrapper {
+    padding: 2rem 0 0 2rem;
+  }
+
+  .column_right-wrapper-info {
+    position: absolute;
+    z-index: 10;
+    left: 2rem;
+    bottom: 32rem;
+  }
+
+  .column_right h4 {
+    color: white !important;
+  }
+
+  .column_right p {
+    display: none !important;
+  }
+
+  .column_right button {
+    color: white;
+    border-bottom: 1px solid white !important;
+  }
+
+  .carousel_wrapper {
+    min-height: 32rem;
+  }
+
+  .carousel_wrapper p {
+    display: block !important;
+  }
+}
