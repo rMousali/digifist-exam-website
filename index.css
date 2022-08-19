@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Avenir";
-  src: url("./public/fonts/Avenir/Avenir.ttc");
+  src: url("./public/fonts/Avenir/Avenir.ttc") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "ITC Avant Garde Gothic Std Bold";
-  src: url("./public/fonts/ITC/ITCAvantGardePro-Bold.otf");
+  src: url("./public/fonts/ITC/ITCAvantGardePro-Bold.otf") format("truetype");
   font-style: bold;
   font-weight: 700;
   font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "ITC Avant Garde Gothic Std Demi";
-  src: url("./public/fonts/ITC/ITCAvantGardePro-Demi.otf");
+  src: url("./public/fonts/ITC/ITCAvantGardePro-Demi.otf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
